@@ -1,0 +1,9 @@
+git status
+git log
+git log --online
+git status -s
+git clone <url>
+git add <file name>
+git commit -m <comment> <filename>
+git checkout <filename>
+git push 
