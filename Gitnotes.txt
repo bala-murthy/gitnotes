@@ -7,3 +7,113 @@ git add <file name>
 git commit -m <comment> <filename>
 git checkout <filename>
 git push 
+
+----------------------------------
+
+
+git config --global user.email "balamurugan.murthy@gmail.com"
+git config --global user.name "bala.murthy"
+
+git config --global --list
+
+
+cat ~/.gitconfig // View the git config file
+
+git config --global user.name "bala.murthy"
+
+sasikumar@01HW541245:~/test-git$ ls -lrt ~/.gitconfig
+-rw-rw-r-- 1 sasikumar sasikumar 65 Jan 29 14:51 /home/sasikumar/.gitconfig
+
+
+create an empty project and make it as a Git repository
+
+  - create a dir, place files and do "git init"
+
+Same command is applicable if you need to convert an unversioned project to a Git repository.Go the project dir and issue the git init command.
+
+Copy an existing git project from github to your local -->
+
+   fork the project - so from the other user, the project is copied to your account
+   copy the Project url
+   do a "git clone <url>
+
+
+"git status" (also see "git status --long" ; op will be same as default command operates with --long option; try using "git status -s" to see the short form of the git status)
+
+   - to know the status of each and every file in the git repository in ur local.
+   - if the file is just created, it will be shown in red and specified as untracked files
+   - these untracked files need to be added to git staging area using "git add filename.txt" command (this is called staging)
+   - if you again wanted to revert trackign an added file use "git rm --cached <filename>" (this is called unstaging)
+
+"git commit -m <commit comments> <filename>"
+  - used to commit the staged files in Git to be moved to commit area.
+  - once committed, the working directory becomes clean
+     (3 areas in git are working area - staged area - committed area ; once committed, you can now push the changes to github)
+  - the result of "git status" command will tell you that "nothing to commit , working directory clean"
+
+use case : 
+
+  create 2 files, 
+  check status - compare normal and short form  (u will see ?? symbol)
+  add mofified file1, 
+  commit file1
+  update committed file1 ( u will see M status) 
+  add it ?
+  commit it ?
+  
+  rename file1 , check status
+  add or commit accordingly.
+
+"git branch" -> branch is a new project working area, staging area, history of commands are specific to this branch.
+
+Below commands, see all available branches, create new branch called demobranch, see all available branches, switch to demobranch, check if moved to demobranch, see if the comments made in master branch is available in demobranch, Switch back to master branch
+
+sasikumar@01HW541245:~/test-git/sample-base-project$ git branch
+* master
+sasikumar@01HW541245:~/test-git/sample-base-project$ git branch demobranch
+sasikumar@01HW541245:~/test-git/sample-base-project$ git branch
+  demobranch
+* master
+sasikumar@01HW541245:~/test-git/sample-base-project$ git checkout demobranch
+Switched to branch 'demobranch'
+sasikumar@01HW541245:~/test-git/sample-base-project$ git branch
+* demobranch
+  master
+
+sasikumar@01HW541245:~/test-git/sample-base-project$ git branch
+* master
+sasikumar@01HW541245:~/test-git/sample-base-project$ git branch demobranch
+sasikumar@01HW541245:~/test-git/sample-base-project$ git branch
+  demobranch
+* master
+sasikumar@01HW541245:~/test-git/sample-base-project$ git checkout demobranch
+Switched to branch 'demobranch'
+sasikumar@01HW541245:~/test-git/sample-base-project$ git branch
+* demobranch
+  master
+
+sasikumar@01HW541245:~/test-git/sample-base-project$ git checkout master
+Switched to branch 'master'
+sasikumar@01HW541245:~/test-git/sample-base-project$ git branch
+  demobranch
+* master
+
+
+-- git checkout ---
+
+used for multiple purposes.
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
