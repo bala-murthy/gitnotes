@@ -103,6 +103,12 @@ sasikumar@01HW541245:~/test-git/sample-base-project$ git branch
 
 used for multiple purposes.
 
+------- 
+
+If you see class not resolved error in idea, then use File -> Invaldiate cache and Restart
+
+
+
 
 
 
